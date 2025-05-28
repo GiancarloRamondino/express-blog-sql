@@ -4,7 +4,7 @@ const connection = mysql2.createConnection({
     host: 'localhost',
     user: 'root',
     port: 3306,
-    password: 'your_password', // Sostituisci con la tua password
+    password: 'your-passwword', // Sostituisci con la tua password
     database: 'db_blog'
 });
 connection.connect((err) => {
