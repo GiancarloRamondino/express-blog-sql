@@ -1,8 +1,17 @@
-const posts = require('../data/post.js');
+const posts = require('../data/db.js');
 
 // index
 function index(req, res) {
-    res.json(posts);
+    const  sql  = 'SELECT * FROM posts';
+    posts.query(sql, (err, results) => {
+        if (err) {
+            return res.status(500).json({
+                status: 'errore',
+                message: 'Errore nel recupero dei post',
+            });
+        }
+        res.json(results);
+    });
 }
 
 // show

@@ -18,5 +18,5 @@ app.get('/', (req, res) => {
 app.use('/posts', postRouter); 
 
 app.listen(port, () => {
-  console.log(`Server in ascoolto sulla porta:${port}`);
+  console.log(`Server in ascolto sulla porta:${port}`);
 });
